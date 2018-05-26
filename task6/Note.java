@@ -34,6 +34,6 @@ public class Note {
 
     @Override
     public String toString() {
-        return text + ((date==null)?"":" created at " + date);
+        return text + ((date == null) ? "" : " created at " + date);
     }
 }
