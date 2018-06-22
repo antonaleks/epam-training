@@ -1,6 +1,5 @@
 package t5;
 
-import java.util.Map;
 import org.junit.Test;
 
 public class GroupStudentsTest {
@@ -9,8 +8,14 @@ public class GroupStudentsTest {
     public void findAndPrintStudentsEstimate() {
         Student anton = new Student("Anton");
         Student elena = new Student("Elena");
-        Group<Integer> group1 = new Group<>(Disciplines.Chemistry, Map.of(anton, 2, elena, 5));
-        Group<Double> group2 = new Group<>(Disciplines.Biology, Map.of(anton, 10.0, elena, 100.0));
+        Group group1 = new Group(Disciplines.Physics);
+        group1.addStudent(anton, new Mark<>(2));
+        group1.addStudent(elena, new Mark<>(4));
+        Group group2 = new Group(Disciplines.Programming);
+        group2.addStudent(anton, new Mark<>(2.0));
+        group2.addStudent(elena, new Mark<>(4.0));
         anton.findStudentsEstimates(group1, group2);
+        System.out
+            .println(group1.getStudents().get(anton).sameAny(group2.getStudents().get(anton)));
     }
 }

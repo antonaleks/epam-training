@@ -42,7 +42,7 @@ public class Student {
     }
 
     public void findStudentsEstimates(Group... groups) {
-        System.out.println(name + "'s estimates: ");
+        System.out.println(name + "'s marks: ");
         for (Group group : groups) {
             System.out
                 .println("in " + group.getDiscipline() + " is " + group.getStudents().get(this));

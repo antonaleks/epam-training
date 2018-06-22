@@ -1,18 +1,19 @@
 package t5;
 
 public enum Disciplines {
-    Programming(Integer.TYPE),
-    Physics(Double.TYPE),
-    Chemistry(Integer.TYPE),
-    Biology(Double.TYPE);
+    Programming {
+        public String getClassType() {
+            return "Double";
+        }
+    },
+    Physics {
+        public String getClassType() {
+            return "Integer";
+        }
+    };
 
-    private Class estimateType;
-
-    public Class getEstimateType() {
-        return estimateType;
+    public String getClassType() {
+        return "Number";
     }
 
-    Disciplines(Class estimateType) {
-        this.estimateType = estimateType;
-    }
 }
