@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class RegTest {
 
-    String fileDir = "/home/anton/IdeaProjects/epam-training/src/test/resources/example.html";
+    String fileDir = "src/test/resources/example.html";
 
     @Test
     public void readAndFind() throws IOException {
