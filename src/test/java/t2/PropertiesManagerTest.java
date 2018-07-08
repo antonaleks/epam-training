@@ -8,8 +8,7 @@ public class PropertiesManagerTest {
     public void testProps() {
         PropertiesManager.loadProperties("src/main/resources/test.properties");
         System.out.println(PropertiesManager.getValue("one"));
-        System.out.println(PropertiesManager.getValue("three"));
-
+        PropertiesManager.putKey("one", "asdsadas");
     }
 
 }
