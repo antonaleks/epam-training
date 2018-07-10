@@ -9,31 +9,26 @@ import lombok.experimental.NonFinal;
 
 @FieldDefaults(level = PRIVATE)
 @Value
-public class Account extends Acc {
+public class AccountConc extends Acc {
 
     String number;
     @NonFinal
     BigDecimal balance;
 
-    public Account(String number, BigDecimal balance) {
+    public AccountConc(String number, BigDecimal balance) {
         this.number = number;
         this.balance = balance;
     }
 
-    Object lock = new Object();
 
     public void deposit(BigDecimal amount) {
-        synchronized (lock) {
-            BigDecimal x = balance.add(amount);
-            balance = x;
-        }
+        BigDecimal x = balance.add(amount);
+        balance = x;
     }
 
     public void withdraw(BigDecimal amount) {
-        synchronized (lock) {
-            BigDecimal x = balance.subtract(amount);
-            balance = x;
-        }
+        BigDecimal x = balance.subtract(amount);
+        balance = x;
     }
 
 }
