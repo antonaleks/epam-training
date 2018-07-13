@@ -40,6 +40,14 @@
       <artifactId>vavr</artifactId>
       <version>LATEST</version>
     </dependency>
+
+    <!-- H2 -->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>LATEST</version>
+      <!--<scope>test</scope>-->
+    </dependency>
   </dependencies>
 
 
